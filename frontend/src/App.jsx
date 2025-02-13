@@ -1,6 +1,7 @@
 import React from "react";
 import HomePage from "./landing_page/home/HomePage";
 
+
 const App = () => {
   return (
     <div>
@@ -8,5 +9,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;

@@ -1,24 +1,29 @@
-import React from 'react';
-import Navbar from '../Navbar';
-import Awards from './Awards';
+
 import Hero from './Hero';
+import Awards from './Awards';
 import Education from './Education';
 import Pricing from './Pricing';
-import Stats from './Stats';
+import Stats from './stats';
+import Navbar from '../Navbar';
+import OpenAccount from '../OpenAccount';
 import Footer from '../Footer';
 
+
 function HomePage() {
-    return ( 
+    return (  
         <>
-            <Navbar />
-            <Hero />
-            <Awards />
-            <Stats />
-            <Education />
-            <Pricing />
-            <Footer />
+        <Navbar />
+        <Hero />
+        <Awards />
+        <Stats />
+        <Pricing />
+        <Education />
+        <OpenAccount />
+        <Footer />
+
         </>
-     );
+    );
+
 }
 
 export default HomePage;
