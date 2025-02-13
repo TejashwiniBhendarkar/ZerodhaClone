@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Navbar from '../Navbar';
 import Brokerage from './Brokerage';
 import Footer from '../Footer';
@@ -11,6 +11,7 @@ function PricingPage() {
         <Brokerage />
         <Footer /> 
        </>
+
      );
 }
 
