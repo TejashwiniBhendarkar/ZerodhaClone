@@ -1,12 +1,12 @@
 import React from "react";
 
 import Dashboard from "./Dashboard";
-import Topbar from "./Topbar";
+import TopBar from "./TopBar";
 
 const Home = () => {
   return (
     <>
-    <Topbar />
+      <TopBar />
       <Dashboard />
     </>
   );
