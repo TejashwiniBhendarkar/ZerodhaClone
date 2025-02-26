@@ -1,12 +1,21 @@
 require('dotenv').config();
 const express = require("express");
 const mongoose = require('mongoose');
+const bodyParser =require('body-parser');
+const cors = require('cors');
+
 const { HoldingsModel } = require('./model/HoldingsModel');
+const {PositionsModel } = require('./model/PositionsModel');
+const { OrdersModel } =require('./model/OrdersModel');
+
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
 
 mongoose.connect(uri)
     .then(() => {
@@ -46,40 +55,62 @@ mongoose.connect(uri)
 //     }
 // });
 
-app.get('/appPositions', async (req, res) => { 
-    try {
-        let tempPositions = [
-            {
-                product: "CNC",
-                name: "EVEREADY",
-                qty: 2,
-                avg: 316.27,
-                price: 312.35,
-                net: "+0.58%",
-                day: "-1.24%",
-                isLoss: true,
-            },
-            {
-                product: "CNC",
-                name: "JUBLFOOD",
-                qty: 1,
-                avg: 3124.75,
-                price: 3082.65,
-                net: "+10.04%",
-                day: "-1.35%",
-                isLoss: true,
-            },
-        ];
 
-        for (let item of tempPositions) {
-            let newPosition = new PositionsModel(item);
-            await newPosition.save();
-            console.log("Saved:", newPosition);
-        }
+// app.get('/addPositions', async (req, res) => { 
+//     try {
+//         let tempPositions = [
+//             {
+//                 product: "CNC",
+//                 name: "EVEREADY",
+//                 qty: 2,
+//                 avg: 316.27,
+//                 price: 312.35,
+//                 net: "+0.58%",
+//                 day: "-1.24%",
+//                 isLoss: true,
+//             },
+//             {
+//                 product: "CNC",
+//                 name: "JUBLFOOD",
+//                 qty: 1,
+//                 avg: 3124.75,
+//                 price: 3082.65,
+//                 net: "+10.04%",
+//                 day: "-1.35%",
+//                 isLoss: true,
+//             },
+//         ];
 
-        res.send("Positions added successfully!");
-    } catch (error) {
-        console.error("Error inserting positions:", error);
-        res.status(500).send("Error adding positions: " + error.message);
-    }
+//         for (let item of tempPositions) {
+//             let newPosition = new PositionsModel(item);
+//             await newPosition.save();
+//             console.log("Saved:", newPosition);
+//         }
+
+//         res.send("Positions added successfully!");
+//     } catch (error) {
+//         console.error("Error inserting positions:", error);
+//         res.status(500).send("Error adding positions: " + error.message);
+//     }
+// });
+
+app.get('/allHoldings' , async(req, res) =>{
+    let allHoldings = await HoldingsModel.find({});
+    res.json(allHoldings);
+});
+
+app.get('/allPositions' , async(req, res) =>{
+    let allPositions = await PositionsModel.find({});
+    res.json(allPositions);
+});
+
+app.post('/newOrder', async(req,res) => {
+    let newOrder= new OrdersModel({
+        name: req.body.name,
+        qty: req.body.qty,
+        price:req.body.price,
+        mode:req.body.mode,
+    });
+    newOrder.save();
+    res.send("order saved");
 });
