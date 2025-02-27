@@ -8,6 +8,9 @@ import SupportPage from "./landing_page/support/SupportPage";
 import ProductPage from "./landing_page/products/ProductPage";
 import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
+import Refer from "./landing_page/Refer";
+import Career from "./landing_page/Career";
+import Login from "./landing_page/login/Login";
 
 const App = () => {
   return (
@@ -20,6 +23,10 @@ const App = () => {
         <Route path="/products" element={<ProductPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/Refer" element={<Refer />} />
+        <Route path="/Career" element={<Career />} />
+        <Route path="/login" element={<Login />} />
+        
       </Routes>
       <Footer />
     </>

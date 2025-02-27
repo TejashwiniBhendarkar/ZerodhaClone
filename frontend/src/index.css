@@ -70,6 +70,12 @@ button:focus-visible {
 .nav-link{
   margin-left: 40px;
 }
+
+.navbar-nav .nav-link.active-tab {
+  color: rgb(56,126,209) !important;
+  
+}
+
 #supportHero{
   background-color:rgb(56,126,209) ;
   color:white;

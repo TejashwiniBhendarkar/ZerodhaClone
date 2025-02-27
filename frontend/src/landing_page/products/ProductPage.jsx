@@ -1,12 +1,15 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import { useEffect } from "react";
 import Hero from './Hero';
 import LeftSection from './LeftSection';
-import Footer from '../Footer';
+
 import RightSection from './RightSection';
 import Universe from './Universe';
 
 function ProductPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
 
