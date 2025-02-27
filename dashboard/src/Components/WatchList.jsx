@@ -42,7 +42,7 @@ const WatchList = () => {
   return (
     <div className="watchlist-container">
       <div className="search-container">
-        <input
+        <input style={{marginTop:"50px"}}
           type="text"
           name="search"
           id="search"
@@ -116,10 +116,10 @@ const WatchListActions = ({ uid }) => {
   return (
     <span className="actions">
       <Tooltip title="Buy (B)" placement="top" arrow TransitionComponent={Grow} onClick={() => generalContext.openBuyWindow(uid)}>
-        <button className="buy">Buy</button>
+        <button className="buy" style={{borderRadius:"2px",height:"30px",width:"50px"}}>Buy</button>
       </Tooltip>
       <Tooltip title="Sell (S)" placement="top" arrow TransitionComponent={Grow}>
-        <button className="sell">Sell</button>
+        <button className="sell" style={{borderRadius:"2px",height:"30px",width:"50px"}}>Sell</button>
       </Tooltip>
       <Tooltip title="Analytics (A)" placement="top" arrow TransitionComponent={Grow}>
         <button className="action">

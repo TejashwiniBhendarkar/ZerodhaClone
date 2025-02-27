@@ -39,7 +39,7 @@ const Positions = () => {
             height: "100vh",
           }}
         >
-          <h3 className="title">Positions ({allPositions.length})</h3>
+          <h3 className="title"  style={{marginTop:"50px"}}>Positions ({allPositions.length})</h3>
 
           <div className="order-table">
             <table>

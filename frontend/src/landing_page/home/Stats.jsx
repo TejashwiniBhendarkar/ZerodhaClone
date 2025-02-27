@@ -37,13 +37,13 @@ function Stats() {
                 <div className="col-6">
                     <img src="media/images/ecosystem.png" alt="ecosystem" style={{ width: "90%" }} />
                     <div>
-                      
+
                         <span className="mx-5 text-primary" style={{ cursor: "pointer", textDecoration: "none" }} onClick={handleProduct}>
                             Explore our products <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </span>
-                        
-                       
-                        <a href="" style={{ textDecoration: "none" }}>
+
+
+                        <a href="http://localhost:5174" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                             Try Kite demo <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>

@@ -12,6 +12,13 @@ import Refer from "./landing_page/Refer";
 import Career from "./landing_page/Career";
 import Login from "./landing_page/login/Login";
 
+
+
+const DashboardRedirect = () => {
+  window.location.href = "http://localhost:5174"; // Redirects user to dashboard
+  return null;
+};
+
 const App = () => {
   return (
     <>
@@ -26,6 +33,9 @@ const App = () => {
         <Route path="/Refer" element={<Refer />} />
         <Route path="/Career" element={<Career />} />
         <Route path="/login" element={<Login />} />
+        
+        {/* Redirecting to Dashboard */}
+        <Route path="/dashboard" element={<DashboardRedirect />} />
         
       </Routes>
       <Footer />

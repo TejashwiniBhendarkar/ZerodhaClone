@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*{
+  margin:0;
+  padding:0;
+  top:0;
+}
 
 .dashboard-container {
   width: 100%;
@@ -655,7 +660,7 @@ hr {
   padding: 15px 20px;
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgb(241, 241, 241);
+  color: rgb(24, 23, 23);
   border-bottom: 0.8px solid rgb(235, 234, 234);
 }
 

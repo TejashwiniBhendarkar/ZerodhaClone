@@ -42,7 +42,7 @@ const Holdings = () => {
         <div style={{ width: "33%", borderRight: "1px solid #eee", height: "100vh", overflowY: "auto" }}>
           <WatchList />
         </div>
-        <div style={{ width: "67%", padding: "20px", overflowY: "auto", height: "100vh" }}>
+        <div style={{ width: "67%", padding: "20px", overflowY: "auto", height: "100vh",marginTop:"50px" }}>
           <h3 className="title">Holdings ({allHoldings.length})</h3>
 
           <div className="order-table">
