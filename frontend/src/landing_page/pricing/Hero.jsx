@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 
 function Hero() {
+   useEffect(() => {
+          window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="container">
       <div className="row border-bottom text-center mt-5 pt-5">
