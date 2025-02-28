@@ -11,6 +11,9 @@ import Footer from "./landing_page/Footer";
 import Refer from "./landing_page/Refer";
 import Career from "./landing_page/Career";
 import Login from "./landing_page/login/Login";
+import Varsity from "./landing_page/varsity/Varsity";
+import TradingQA from "./landing_page/tradingQA/TradingQA";
+import Console from "./landing_page/console/Console";
 
 
 
@@ -33,9 +36,10 @@ const App = () => {
         <Route path="/Refer" element={<Refer />} />
         <Route path="/Career" element={<Career />} />
         <Route path="/login" element={<Login />} />
-        
-        {/* Redirecting to Dashboard */}
         <Route path="/dashboard" element={<DashboardRedirect />} />
+        <Route path="/varsity" element={<Varsity />} />
+        <Route path="/tradingQA" element={<TradingQA />} />
+        <Route path="/console" element={<Console />} />
         
       </Routes>
       <Footer />

@@ -24,39 +24,27 @@ function Footer() {
             <br />
             <Link to="/career">Career</Link>
             <br />
-            <a href="https://zerodha.tech/" target="_blank" rel="noopener noreferrer">Zerodha.tech</a>
-            <br />
-
-            <a href="https://zerodha.com/media/" target="_blank" rel="noopener noreferrer">Press & Media</a>
-            <br />
-            <a href="https://zerodha.com/cares/" target="_blank" rel="noopener noreferrer">Zerodha cares (CSR)</a>
-            <br />
+           
           </div>
 
           {/* Support Section */}
           <div className="col">
             <p>Support</p>
-            <Link to="/contact">Contact</Link>
-            <br />
+           
             <Link to="/support">Support portal</Link>
             <br />
-            <Link to="/blog">Z-Connect blog</Link>
+            
+            <Link to="/pricing">List of charges</Link>
             <br />
-            <Link to="/charges">List of charges</Link>
-            <br />
-            <Link to="/resources">Downloads & resources</Link>
-            <br />
+           
           </div>
 
           {/* Account Section */}
           <div className="col">
             <p>Account</p>
-            <Link to="/open-account">Open an account</Link>
+            <Link to="/signup">Open an account</Link>
             <br />
-            <Link to="/fund-transfer">Fund transfer</Link>
-            <br />
-            <Link to="/challenge">60 day challenge</Link>
-            <br />
+           
           </div>
         </div>
 
