@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -28,13 +27,18 @@ function Login() {
         number,
         password,
       });
+
       console.log(response.data);
-      alert("User registered successfully!");
-      setNumber("");
-      setPassword("");
+
+      if (response.data.success) {
+        alert("Login successful!");
+        window.open("http://localhost:5174", "_blank"); 
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
     } catch (err) {
       console.error(err);
-      alert("Registration failed. Try again.");
+      alert("Login failed. Try again.");
     }
   };
 
@@ -67,11 +71,10 @@ function Login() {
               />
             </div>
 
-            {/* Password Input */}
             <div className="input-group mb-3" style={{ maxWidth: "350px" }}>
               <input
                 type="password"
-                placeholder="Create a password"
+                placeholder="Enter your password"
                 value={password}
                 onChange={handlePasswordChange}
                 className="form-control shadow-none p-3 fs-5"
@@ -79,20 +82,12 @@ function Login() {
               />
             </div>
 
-            <button className="btn btn-primary w-50 p-2 fs-5">Log in</button>
+            <button type="submit" className="btn btn-primary w-50 p-2 fs-5">Log in</button>
           </form>
 
-          {/* <p className="mt-3">
-            Already have an account?{" "}
-            <Link to="/login" className="text-decoration-none" style={{ color: "rgb(56,126,209)" }}>
-              Login here!
-            </Link>
-          </p> */}
           <p className="text-muted small mt-5">
             By proceeding, you agree to the Zerodha{" "}
-            <a href="#" className="text-decoration-none">
-              terms & privacy policy
-            </a>.
+            <a href="#" className="text-decoration-none">terms & privacy policy</a>.
           </p>
         </div>
       </div>

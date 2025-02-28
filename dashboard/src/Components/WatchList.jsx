@@ -65,6 +65,7 @@ const WatchList = () => {
             {
               label: "Price",
               data: watchlist.map((stock) => liveStockData[stock.name] || stock.price),
+            
               backgroundColor: [
                 "rgba(255, 99, 132, 0.5)",
                 "rgba(54, 162, 235, 0.5)",
@@ -101,8 +102,8 @@ const WatchListItem = ({ stock, livePrice }) => {
         <p className={stock.isDown ? "down" : "up"}>{stock.name}</p>
         <div className="itemInfo">
           <span className="percent">{stock.percent}</span>
-          {stock.isDown ? <KeyboardArrowDown className="down" /> : <KeyboardArrowUp className="down" />}
-          <span className="price">{livePrice || stock.price}</span> {/* Live price here */}
+          {stock.isDown ? <KeyboardArrowDown className="down" /> : <KeyboardArrowUp className="up" />}
+          <span className="price" style={{color:"black"}}>{livePrice || stock.price}</span> {/* Live price here */}
         </div>
       </div>
       {showWatchlistActions && <WatchListActions uid={stock.name} />}
@@ -116,9 +117,9 @@ const WatchListActions = ({ uid }) => {
   return (
     <span className="actions">
       <Tooltip title="Buy (B)" placement="top" arrow TransitionComponent={Grow} onClick={() => generalContext.openBuyWindow(uid)}>
-        <button className="buy" style={{borderRadius:"2px",height:"30px",width:"50px"}}>Buy</button>
+        <button className="buy" style={{borderRadius:"2px",height:"30px",width:"50px",marginRight:"30%"}}>Buy</button>
       </Tooltip>
-      <Tooltip title="Sell (S)" placement="top" arrow TransitionComponent={Grow}>
+      {/* <Tooltip title="Sell (S)" placement="top" arrow TransitionComponent={Grow}>
         <button className="sell" style={{borderRadius:"2px",height:"30px",width:"50px"}}>Sell</button>
       </Tooltip>
       <Tooltip title="Analytics (A)" placement="top" arrow TransitionComponent={Grow}>
@@ -130,7 +131,7 @@ const WatchListActions = ({ uid }) => {
         <button className="action">
           <MoreHoriz className="icon" />
         </button>
-      </Tooltip>
+      </Tooltip> */}
     </span>
   );
 };
