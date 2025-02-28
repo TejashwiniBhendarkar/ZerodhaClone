@@ -71,7 +71,7 @@ function Navbar() {
                         )}
 
                         {/* Trading Platforms */}
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 p-3">
                             <h6 className="fw-bold">Trading Platforms</h6>
                             <ul className="list-unstyled">
                                 <li>
@@ -83,26 +83,8 @@ function Navbar() {
                             </ul>
                         </div>
 
-                        {/* Utilities */}
-                        <div className="col-md-3 p-3">
-                            <h6 className="fw-bold">Utilities</h6>
-                            <ul className="list-unstyled">
-                                <li><Link to="https://zerodha.com/brokerage-calculator/#tab-equities" className="dropdown-item" onClick={closeMenu}>Brokerage Calculator</Link></li>
-                                <li><Link to="https://zerodha.com/markets" className="dropdown-item" onClick={closeMenu}>Markets</Link></li>
-                            </ul>
-                        </div>
-
-                        {/* Updates */}
-                        <div className="col-md-3 p-3">
-                            <h6 className="fw-bold">Updates</h6>
-                            <ul className="list-unstyled">
-                                <li><Link to="https://zerodha.com/z-connect" className="dropdown-item" onClick={closeMenu}>Z-Connect Blog</Link></li>
-                                <li><Link to="https://pulse.zerodha.com" className="dropdown-item" onClick={closeMenu}>Pulse News</Link></li>
-                            </ul>
-                        </div>
-
                         {/* Education */}
-                        <div className="col-md-3 p-3">
+                        <div className="col-6 p-3">
                             <h6 className="fw-bold">Education</h6>
                             <ul className="list-unstyled">
                                 <li><Link to="/varsity" className="dropdown-item" onClick={closeMenu}><img src="media/images/var.png" alt="Varsity" width="20" /> Varsity</Link></li>

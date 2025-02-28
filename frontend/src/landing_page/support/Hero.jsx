@@ -10,7 +10,7 @@ function Hero() {
             <div className=" row p-5">
                 <div className="col-6 p-5" >
                     <h1 className='fs-3'>Search for an answer or browse help topics to create a ticket</h1>
-                    <input className="mt-3 mb-3"placeholder="Eg: how do i activate F&O, why is my order getting rejected ..."/>
+                    <input className="mt-3 mb-3"placeholder="Eg: how do i activate F&O, order is getting rejected ..."/>
                     <br/>
                     <a className="m-3" href="">Track account opening</a>
                     <a className="m-3" href="">Track segment activation</a>

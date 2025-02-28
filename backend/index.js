@@ -106,16 +106,36 @@ app.get('/allPositions' , async(req, res) =>{
     res.json(allPositions);
 });
 
-app.post('/newOrder', async(req,res) => {
-    let newOrder= new OrdersModel({
-        name: req.body.name,
-        qty: req.body.qty,
-        price:req.body.price,
-        mode:req.body.mode,
-    });
-    await newOrder.save();
-    res.send("order saved");
+// 
+app.get('/orders', async (req, res) => {
+    try {
+        const allOrders = await OrdersModel.find({});
+        res.json(allOrders);
+    } catch (error) {
+        console.error("Error fetching orders:", error);
+        res.status(500).json({ message: "Error fetching orders" });
+    }
 });
+
+// ✅ Save a new order and return the saved order
+app.post('/newOrder', async (req, res) => {
+    try {
+        let newOrder = new OrdersModel({
+            name: req.body.name,
+            qty: req.body.qty,
+            price: req.body.price,
+            mode: req.body.mode,
+            status: "Pending", // Default status
+        });
+
+        await newOrder.save();
+        res.json({ success: true, message: "Order saved!", order: newOrder });
+    } catch (error) {
+        console.error("Error saving order:", error);
+        res.status(500).json({ success: false, message: "Error saving order" });
+    }
+});
+
 app.post("/register", async (req, res) => {
     try {
         console.log("Received Registration Data:", req.body);  // ✅ Debugging

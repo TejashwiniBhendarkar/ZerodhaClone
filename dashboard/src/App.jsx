@@ -8,11 +8,13 @@ import Positions from "./Components/Positions";
 import Funds from "./Components/Funds";
 import Apps from "./Components/Apps";
 import Home from "./Components/Home";
+import { GeneralContextProvider } from "./Components/GeneralContext";
 
 const App = () => {
   console.log("App component is rendering!");
 
   return (
+    <GeneralContextProvider>
     <div className="app-container flex w-screen min-h-screen">
      
       <div className="content flex-1 p-4 bg-gray-800 text-white">
@@ -28,6 +30,7 @@ const App = () => {
         </Routes>
       </div>
     </div>
+    </GeneralContextProvider>
   );
 };
 

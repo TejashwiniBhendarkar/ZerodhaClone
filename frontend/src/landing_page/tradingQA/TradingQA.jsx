@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
 
 const TradingQA = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   const [openIndex, setOpenIndex] = useState(null);
 
   const questions = [

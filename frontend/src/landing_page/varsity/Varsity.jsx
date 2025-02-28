@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
 
 const Varsity = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const articles = [

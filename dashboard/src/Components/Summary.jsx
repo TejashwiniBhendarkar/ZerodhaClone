@@ -3,7 +3,7 @@ import React from "react";
 const Summary = () => {
   return (
     <>
-      <div className="username">
+      <div className="username mt-5">
         <h6>Hi, User!</h6>
         <hr className="divider" />
       </div>
