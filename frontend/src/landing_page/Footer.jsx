@@ -1,55 +1,46 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: "rgb(250, 250, 250)", width: "100vw" }}>
-      <div className="container border-top mt-5">
-        <div className="row mt-5">
-          <div className="col">
-            <img src="media/images/logo.svg" style={{ width: "50%" }} alt="Logo" />
-            <p>&copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.</p>
-          </div>
+    <footer style={{ backgroundColor: "rgb(250, 250, 250)", width: "100%" }}>
+      <div className="container border-top mt-5 py-4">
+        
+        {/* Logo & Copyright */}
+        <div className="text-center text-md-start mb-4">
+          <img src="media/images/logo.svg" style={{ width: "150px" }} alt="Logo" />
+          <p className="mt-2 text-muted">&copy; 2010 - 2025, Zerodha Broking Ltd. All rights reserved.</p>
+        </div>
 
+        {/* Footer Sections */}
+        <div className="row text-center text-md-start">
           {/* Company Section */}
-          <div className="col">
-            <p>Company</p>
-            <Link to="/about">About</Link>
-            <br />
-            <Link to="/products">Products</Link>
-            <br />
-            <Link to="/pricing">Pricing</Link>
-            <br />
-            <Link to="/Refer">Referral programme</Link>
-            <br />
-            <Link to="/career">Career</Link>
-            <br />
-           
+          <div className="col-12 col-md-4 mb-4">
+            <h6 className="fw-bold">Company</h6>
+            <Link to="/about" className="d-block text-muted" style={{textDecoration:"none"}}>About</Link>
+            <Link to="/products" className="d-block text-muted"style={{textDecoration:"none"}}>Products</Link>
+            <Link to="/pricing" className="d-block text-muted"style={{textDecoration:"none"}}>Pricing</Link>
+            <Link to="/Refer" className="d-block text-muted"style={{textDecoration:"none"}}>Referral programme</Link>
+            <Link to="/career" className="d-block text-muted"style={{textDecoration:"none"}}>Careers</Link>
           </div>
 
           {/* Support Section */}
-          <div className="col">
-            <p>Support</p>
-           
-            <Link to="/support">Support portal</Link>
-            <br />
-            
-            <Link to="/pricing">List of charges</Link>
-            <br />
-           
+          <div className="col-12 col-md-4 mb-4">
+            <h6 className="fw-bold">Support</h6>
+            <Link to="/support" className="d-block text-muted"style={{textDecoration:"none"}}>Support portal</Link>
+            <Link to="/pricing" className="d-block text-muted"style={{textDecoration:"none"}}>List of charges</Link>
           </div>
 
           {/* Account Section */}
-          <div className="col">
-            <p>Account</p>
-            <Link to="/signup">Open an account</Link>
-            <br />
-           
+          <div className="col-12 col-md-4 mb-4">
+            <h6 className="fw-bold">Account</h6>
+            <Link to="/signup" className="d-block text-muted"style={{textDecoration:"none"}}>Open an account</Link>
           </div>
         </div>
 
-        {/* Disclaimer and Other Info */}
-        <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
+        {/* Disclaimer */}
+        <div className="mt-4 text-muted" style={{ fontSize: "14px" }}>
           <p>
             Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.: INZ000031633 
             CDSL: Depository services through Zerodha Securities Pvt. Ltd. – SEBI Registration 

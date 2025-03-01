@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+    const location = useLocation(); // Get current route
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,11 +39,16 @@ function Navbar() {
                 {!isMobile && (
                     <div className="collapse navbar-collapse justify-content-end">
                         <ul className="navbar-nav">
-                            <li className="nav-item"><Link className="nav-link" to="/signup">Signup</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/products">Products</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/pricing">Pricing</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/support">Support</Link></li>
+                            {["signup", "about", "products", "pricing", "support"].map((route) => (
+                                <li className="nav-item" key={route}>
+                                    <Link 
+                                        className={`nav-link ${location.pathname === `/${route}` ? "text-primary fw-bold" : ""}`} 
+                                        to={`/${route}`}
+                                    >
+                                        {route.charAt(0).toUpperCase() + route.slice(1)}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 )}
@@ -57,38 +63,72 @@ function Navbar() {
             {isMenuOpen && (
                 <div className="container-fluid position-absolute bg-white shadow p-4" style={{ top: "60px", width: "100%", zIndex: "1000" }}>
                     <div className="row">
-                        {/* Mobile Nav Links (Only in Mobile View) */}
+                        {/* Mobile Nav Links */}
                         {isMobile && (
                             <div className="col-12 mb-3">
                                 <ul className="list-unstyled text-center">
-                                    <li><Link className="dropdown-item" to="/signup" onClick={closeMenu}>Signup</Link></li>
-                                    <li><Link className="dropdown-item" to="/about" onClick={closeMenu}>About</Link></li>
-                                    <li><Link className="dropdown-item" to="/products" onClick={closeMenu}>Products</Link></li>
-                                    <li><Link className="dropdown-item" to="/pricing" onClick={closeMenu}>Pricing</Link></li>
-                                    <li><Link className="dropdown-item" to="/support" onClick={closeMenu}>Support</Link></li>
+                                    {["signup", "about", "products", "pricing", "support"].map((route) => (
+                                        <li key={route}>
+                                            <Link 
+                                                className={`dropdown-item ${location.pathname === `/${route}` ? "text-primary fw-bold" : ""}`} 
+                                                to={`/${route}`} 
+                                                onClick={closeMenu}
+                                            >
+                                                {route.charAt(0).toUpperCase() + route.slice(1)}
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         )}
 
-                        {/* Trading Platforms */}
-                        <div className="col-6 p-3">
+                        {/* Trading Platforms Section */}
+                        <div className="col-md-6 p-3">
                             <h6 className="fw-bold">Trading Platforms</h6>
                             <ul className="list-unstyled">
-                                <li>
+                                <li className="d-flex align-items-center gap-2">
+                                    <img src="/media/images/logo.png" alt="Kite" width="20" />
                                     <a href="http://localhost:5174" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-                                        <img src="/media/images/logo.png" alt="Kite" width="20" /> Kite - Trading
+                                        Kite - Trading
                                     </a>
                                 </li>
-                                <li><Link to="/console" className="dropdown-item" onClick={closeMenu}><img src="media/images/console.svg" alt="Console" width="20" /> Console</Link></li>
+                                <li className="d-flex align-items-center gap-2">
+                                    <img src="media/images/console.svg" alt="Console" width="20" />
+                                    <Link 
+                                        to="/console" 
+                                        className={`dropdown-item ${location.pathname === "/console" ? "text-primary fw-bold" : ""}`} 
+                                        onClick={closeMenu}
+                                    >
+                                        Console
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
-                        {/* Education */}
-                        <div className="col-6 p-3">
+                        {/* Education Section */}
+                        <div className="col-md-6 p-3">
                             <h6 className="fw-bold">Education</h6>
                             <ul className="list-unstyled">
-                                <li><Link to="/varsity" className="dropdown-item" onClick={closeMenu}><img src="media/images/var.png" alt="Varsity" width="20" /> Varsity</Link></li>
-                                <li><Link to="/tradingQA" className="dropdown-item" onClick={closeMenu}><img src="media/images/trad.png" alt="Trading Q&A" width="20" /> Trading Q&A</Link></li>
+                                <li className="d-flex align-items-center gap-2">
+                                    <img src="media/images/var.png" alt="Varsity" width="20" />
+                                    <Link 
+                                        to="/varsity" 
+                                        className={`dropdown-item ${location.pathname === "/varsity" ? "text-primary fw-bold" : ""}`} 
+                                        onClick={closeMenu}
+                                    >
+                                        Varsity
+                                    </Link>
+                                </li>
+                                <li className="d-flex align-items-center gap-2">
+                                    <img src="media/images/trad.png" alt="Trading Q&A" width="20" />
+                                    <Link 
+                                        to="/tradingQA" 
+                                        className={`dropdown-item ${location.pathname === "/tradingQA" ? "text-primary fw-bold" : ""}`} 
+                                        onClick={closeMenu}
+                                    >
+                                        Trading Q&A
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

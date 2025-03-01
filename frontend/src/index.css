@@ -13,28 +13,92 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Prevent Horizontal Overflow */
+html, body {
+  overflow-x: hidden;
 }
 
+/* Fix Flex Issues */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: block; /* Ensures normal document flow */
+  color:#424242;
 }
 
+/* Responsive Headings */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar Styling */
+.nav-link {
+  margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 10px;
+  }
+}
+
+/* Active Tab Styling */
+.navbar-nav .nav-link.active-tab {
+  color: rgb(56,126,209) !important;
+}
+
+/* Support Hero Section */
+#supportHero {
+  background-color: rgb(56,126,209);
+  color: white;
+}
+
+#supportHero a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive Support Wrapper */
+#supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0 10%;
+}
+
+@media (max-width: 768px) {
+  #supportWrapper {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+}
+
+/* Input Field Styling */
+#supportHero input {
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -46,22 +110,27 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light Mode Adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
