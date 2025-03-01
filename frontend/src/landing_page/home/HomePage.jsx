@@ -4,9 +4,10 @@ import Awards from './Awards';
 import Education from './Education';
 import Pricing from './Pricing';
 import Stats from './stats';
-import Navbar from '../Navbar';
 import OpenAccount from '../OpenAccount';
-import Footer from '../Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 
 function HomePage() {
