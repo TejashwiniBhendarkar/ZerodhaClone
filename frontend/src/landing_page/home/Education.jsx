@@ -6,7 +6,7 @@ function Education() {
         <div className="container mt-5">
             <div className="row d-flex align-items-center flex-column flex-md-row">
                 
-                {/* Image Section */}
+              
                 <div className="col-12 col-md-6 text-center text-md-start">
                     <img 
                         src="media/images/education.svg" 
@@ -16,7 +16,7 @@ function Education() {
                     />
                 </div>
                 
-                {/* Text Section */}
+              
                 <div className="col-12 col-md-6 text-center text-md-start mt-4 mt-md-0">
                     <h1 className='mb-3 fs-2 text-start p-3'>Free and open market education</h1>
                     <p className='text-start p-3'>

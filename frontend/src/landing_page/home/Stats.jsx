@@ -6,14 +6,14 @@ function Stats() {
     const navigate = useNavigate();
 
     const handleProduct = () => {
-        navigate("/products");  // Navigates to /products without reloading
+        navigate("/products");  
     };
 
     return (
         <div className="container mt-5 p-3 ms-md-5 text-start">
             <div className="row p-3 align-items-center">
                 
-                {/* Text Section */}
+               
                 <div className="col-12 col-md-6">
                     <h1 className="fs-3 fw-bold mb-4 text-md-start ms-md-5 text-start">
                         Trust with confidence
@@ -40,11 +40,11 @@ function Stats() {
                     </p>
                 </div>
 
-                {/* Image & Links Section */}
+               
                 <div className="col-12 col-md-6 text-center">
                     <img src="media/images/ecosystem.png" alt="ecosystem" className="img-fluid mb-3 ms-md-5" style={{ maxWidth: "90%" }} />
                     
-                    {/* Links with proper spacing */}
+                    
                     <div className="d-flex align-items-center gap-4 flex-wrap justify-content-center justify-content-md-start">
                         <span 
                             className="text-primary ms-5" 

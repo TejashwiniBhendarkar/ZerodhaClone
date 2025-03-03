@@ -156,7 +156,7 @@ const TradingQA = () => {
       <div className="list-group">
         {questions.map((qa, index) => (
           <div key={index} className="mb-2">
-            {/* Question Button */}
+           
             <button
               className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
               onClick={() => toggleAnswer(index)}
@@ -165,7 +165,7 @@ const TradingQA = () => {
               <span>{openIndex === index ? "▲" : "▼"}</span>
             </button>
 
-            {/* Answer (Hidden by Default) */}
+           
             {openIndex === index && (
               <div className="list-group-item text-muted">{qa.answer}</div>
             )}

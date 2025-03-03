@@ -11,7 +11,7 @@ function Pricing() {
         <div className="container mt-5">
             <div className="row p-md-3 d-flex align-items-center mt-5">
                 
-                {/* Title & Description (Above in Mobile, Left in Desktop) */}
+               
                 <div className="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
                     <h1 className='mb-3 fs-2 text-start p-3'>Unbeatable pricing</h1>
                     <p className='text-start p-3'>
@@ -25,7 +25,7 @@ function Pricing() {
                     </span>
                 </div>
 
-                {/* Pricing Cards (Stacked in Mobile, Side-by-Side in Desktop) */}
+              
                 <div className="col-12 col-md-6 offset-md-2">
                     <div className="row text-center">
                         <div className="col-12 col-md-6 p-3 border">

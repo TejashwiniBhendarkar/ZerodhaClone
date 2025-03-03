@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function LeftSection({
   imageURL,
@@ -6,29 +7,43 @@ function LeftSection({
   productDesription,
   tryDemo,
   learnMore,
-  googlePlay,
-  appStore,
+ 
 }) {
   return (
-    <div className="container mt-5">
-      <div className="row">
-        <div className="col-6">
-          <img src={imageURL} />
+    <div className="container ">
+      <div className="row align-items-center">
+      
+        <div className="col-lg-6 col-md-6 col-sm-12 text-center">
+          <img
+            src={imageURL}
+            alt="Product"
+            className="img-fluid"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
         </div>
-        <div className="col-6 p-5 mt-5">
+
+       
+        <div className="col-lg-6 col-md-6 col-sm-12 p-4 mt-md-0">
           <h1>{productName}</h1>
           <p>{productDesription}</p>
-          {/* <div>
-            <a href={tryDemo}>Try Demo<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-            <a href={learnMore} style={{ marginLeft: "100px" }}>Learn More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-          </div> */}
-          {/* <div className="mt-3">
-            <a href={googlePlay}><img src="media/images/googlePlayBadge.svg" /> </a>
-            <a href={appStore}>
-              <img
-                src="media/images/appstoreBadge.svg"
-                style={{ marginLeft: "50px" }}
-              />
+
+         
+          <div className="mt-3">
+            <a href={tryDemo} className="text-decoration-none">
+              Try Demo <i className="fa fa-long-arrow-right ms-1"></i>
+            </a>
+            <a href={learnMore} className="text-decoration-none mx-4">
+              Learn More <i className="fa fa-long-arrow-right ms-1"></i>
+            </a>
+          </div>
+
+          {/* App Store Badges */}
+          {/* <div className="mt-4">
+            <a href={googlePlay}>
+              <img src="media/images/googlePlayBadge.svg" className="img-fluid" style={{ maxHeight: "50px" }} />
+            </a>
+            <a href={appStore} className="ms-3">
+              <img src="media/images/appstoreBadge.svg" className="img-fluid" style={{ maxHeight: "50px" }} />
             </a>
           </div> */}
         </div>

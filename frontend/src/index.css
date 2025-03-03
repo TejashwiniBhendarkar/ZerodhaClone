@@ -62,41 +62,6 @@ img {
   color: rgb(56,126,209) !important;
 }
 
-/* Support Hero Section */
-#supportHero {
-  background-color: rgb(56,126,209);
-  color: white;
-}
-
-#supportHero a {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Responsive Support Wrapper */
-#supportWrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  padding: 0 10%;
-}
-
-@media (max-width: 768px) {
-  #supportWrapper {
-    flex-direction: column;
-    padding: 0 5%;
-  }
-}
-
-/* Input Field Styling */
-#supportHero input {
-  padding: 20px 50px;
-  width: 100%;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  background-color: white;
-}
 
 /* Buttons */
 button {

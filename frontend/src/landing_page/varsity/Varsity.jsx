@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
 
 const Varsity = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-}, []);
+  }, []);
+
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   const articles = [
@@ -68,17 +68,17 @@ const Varsity = () => {
   ];
 
   return (
-    <div className="container mt-4 p-5">
-      <h2 className="text-center mb-4 p-5">Explore Varsity</h2>
-      
-      {/* Card Layout */}
-      <div className="row">
+    <div className="container p-5">
+      <h2 className="text-center mb-5 fw-bold mt-5 ">Explore Varsity</h2>
+
+   
+      <div className="row g-4">
         {articles.map((article, index) => (
-          <div key={index} className="col-md-4">
-            <div className="card shadow-sm">
+          <div key={index} className="col-lg-4 col-md-6">
+            <div className="card shadow-sm border-0">
               <img src={article.image} className="card-img-top" alt={article.title} />
-              <div className="card-body">
-                <h5 className="card-title">{article.title}</h5>
+              <div className="card-body text-center">
+                <h5 className="card-title fw-bold">{article.title}</h5>
                 <p className="card-text text-muted">{article.description}</p>
                 <Button variant="primary" size="sm" onClick={() => setSelectedArticle(article)}>
                   Read More →
@@ -89,7 +89,7 @@ const Varsity = () => {
         ))}
       </div>
 
-      {/* Modal for displaying full content */}
+    
       {selectedArticle && (
         <Modal show={true} onHide={() => setSelectedArticle(null)} centered>
           <Modal.Header closeButton>
