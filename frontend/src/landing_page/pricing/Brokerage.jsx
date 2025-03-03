@@ -2,68 +2,36 @@ import React from "react";
 
 function Brokerage() {
   return (
-    <div className="container">
-      <div className="row p-5 mt-5 text-center border-top">
-        {/* Brokerage Calculator Section */}
-        <div className="col-8 p-4">
+    <div className="container-fluid px-3 px-md-5">
+      <div className="row p-4 mt-4 text-center border-top">
+       
+        <div className="col-md-8 col-12 p-3 text-md-start text-center">
           <a href="#" style={{ textDecoration: "none" }}>
-            <h3 className="fs-5">Brokerage Calculator</h3>
+            <h3 className="fs-5 fw-bold text-primary">Brokerage Calculator</h3>
           </a>
-          <p style={{ fontSize: "12px", textAlign: "left" }}>
+          <p className="small">
             Use our brokerage calculator to estimate charges on trades, including brokerage, taxes, and transaction fees.
           </p>
-          <ul
-            style={{ textAlign: "left", lineHeight: "2.5", fontSize: "12px" }}
-            className="text-muted"
-          >
-            <li>
-              <strong>Equity Delivery:</strong> ₹0 (No brokerage)
-            </li>
-            <li>
-              <strong>Equity Intraday:</strong> ₹20 per executed order or 0.03% (whichever is lower)
-            </li>
-            <li>
-              <strong>Equity Futures:</strong> ₹20 per executed order
-            </li>
-            <li>
-              <strong>Equity Options:</strong> ₹20 per executed order
-            </li>
-            <li>
-              <strong>Commodity Futures:</strong> ₹20 per executed order
-            </li>
-            <li>
-              <strong>Currency Futures:</strong> ₹20 per executed order
-            </li>
-            <li>
-              <strong>Currency & Commodity Options:</strong> ₹20 per executed order
-            </li>
-            <li>
-              <strong>Call & Trade Charges:</strong> ₹50 + GST per order
-            </li>
-            <li>
-              <strong>DP (Depository Participant) Charges:</strong> ₹13.5 + GST per sell transaction
-            </li>
-            <li>
-              <strong>AMC (Annual Maintenance Charge):</strong> ₹300 per year (for demat accounts)
-            </li>
-            <li>
-              <strong>Fund Transfer via Payment Gateway:</strong> ₹9 per transaction
-            </li>
-            <li>
-              <strong>Physical Contract Note (if requested):</strong> ₹20 per contract note + courier charges
-            </li>
+          <ul className="text-muted small text-start px-md-3" style={{ lineHeight: "1.8" }}>
+            <li><strong>Equity Delivery:</strong> ₹0 (No brokerage)</li>
+            <li><strong>Equity Intraday:</strong> ₹20 per executed order or 0.03% (whichever is lower)</li>
+            <li><strong>Equity Futures:</strong> ₹20 per executed order</li>
+            <li><strong>Equity Options:</strong> ₹20 per executed order</li>
+            <li><strong>Commodity Futures:</strong> ₹20 per executed order</li>
+            <li><strong>Currency Futures:</strong> ₹20 per executed order</li>
+            <li><strong>Currency & Commodity Options:</strong> ₹20 per executed order</li>
+            <li><strong>Call & Trade Charges:</strong> ₹50 + GST per order</li>
+            <li><strong>DP Charges:</strong> ₹13.5 + GST per sell transaction</li>
+            <li><strong>AMC:</strong> ₹300 per year (for demat accounts)</li>
           </ul>
         </div>
 
-        {/* List of Charges Section */}
-        <div className="col-4 p-4">
+     
+        <div className="col-md-4 col-12 p-3 text-md-start text-center">
           <a href="#" style={{ textDecoration: "none" }}>
-            <h3 className="fs-5">List of Charges</h3>
+            <h3 className="fs-5 fw-bold text-primary">List of Charges</h3>
           </a>
-          <ul
-            style={{ textAlign: "left", lineHeight: "2", fontSize: "12px" }}
-            className="text-muted"
-          >
+          <ul className="text-muted small text-start px-md-3" style={{ lineHeight: "1.8" }}>
             <li>SEBI Turnover Charges: 0.0001% on turnover</li>
             <li>Exchange Transaction Charges: Varies based on segment</li>
             <li>GST: 18% on brokerage & transaction charges</li>

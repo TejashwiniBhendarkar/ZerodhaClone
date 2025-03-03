@@ -6,12 +6,12 @@ function Console() {
     return (
         <Container className="mt-5">
             <Row className="align-items-center" style={{ marginTop: "150px", marginBottom: "100px" }}>
-                {/* Left Section (Image) */}
+               
                 <Col md={6}>
                     <img src="/media/images/ConsoleM.png" alt="console" className="img-fluid" />
                 </Col>
 
-                {/* Right Section (Login & Branding) */}
+               
                 <Col md={6}>
                     <img
                         src="/media/images/logo.svg"
@@ -34,7 +34,7 @@ function Console() {
                 </Col>
             </Row>
 
-            {/* First Section - Track Your Holdings */}
+           
             <Row className="align-items-center mb-5">
                 <Col md={6} className="text-start">
                     <h2 style={{ marginBottom: "30px" }}>Track Your Holdings</h2>
@@ -49,22 +49,23 @@ function Console() {
                 </Col>
             </Row>
 
-            {/* Second Section - Reports & Analytics */}
+          
             <Row className="align-items-center mb-5">
-                <Col md={6} className="text-center">
-                    <img style={{ height: "350px" }} src="/media/images/console2.jpg" alt="Reports & Analytics" className="img-fluid" />
-                </Col>
-                <Col md={6} className="text-start">
+                <Col md={12} className="text-start">
                     <h2 style={{ marginBottom: "30px" }}>Detailed Reports & Analytics</h2>
                     <p className="text-muted">
                         Access in-depth reports on your portfolio, including capital gains, profit & loss statements, tax
                         implications, and performance trends. Our interactive charts and filters allow you to analyze data
                         effectively, helping you strategize better investment plans.
                     </p>
+                    <p className="text-muted">
+                        In addition, you can customize reports to gain deeper insights into your trades, asset allocation, and historical 
+                        performance. With our intuitive analytics, you’ll always have the key data you need at your fingertips.
+                    </p>
                 </Col>
             </Row>
 
-            {/* Third Section - Fund Transfers */}
+        
             <Row className="align-items-center" style={{ marginBottom: "100px" }}>
                 <Col md={6} className="text-start">
                     <h2 style={{ marginBottom: "30px" }}>Seamless Fund Transfers</h2>
@@ -78,8 +79,6 @@ function Console() {
                     <img src="/media/images/console3.png" alt="Funds Transfer" className="img-fluid" />
                 </Col>
             </Row>
-
-
         </Container>
     );
 }

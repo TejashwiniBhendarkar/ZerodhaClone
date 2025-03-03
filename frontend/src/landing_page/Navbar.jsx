@@ -6,13 +6,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
-    const location = useLocation(); // Get current route
+    const location = useLocation(); 
 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 992);
             if (window.innerWidth >= 992) {
-                setIsMenuOpen(false); // Close menu when switching to desktop
+                setIsMenuOpen(false); 
             }
         };
         window.addEventListener("resize", handleResize);
@@ -35,14 +35,14 @@ function Navbar() {
                     <img src="media/images/logo.svg" alt="Logo" className="img-fluid" style={{ width: "140px" }} />
                 </Link>
 
-                {/* Desktop Navbar Links */}
+               
                 {!isMobile && (
                     <div className="collapse navbar-collapse justify-content-end">
                         <ul className="navbar-nav">
                             {["signup", "about", "products", "pricing", "support"].map((route) => (
                                 <li className="nav-item" key={route}>
                                     <Link 
-                                        className={`nav-link ${location.pathname === `/${route}` ? "text-primary fw-bold" : ""}`} 
+                                        className={`nav-link ${location.pathname === `/${route}` ? "text-primary " : ""}`} 
                                         to={`/${route}`}
                                     >
                                         {route.charAt(0).toUpperCase() + route.slice(1)}
@@ -53,17 +53,17 @@ function Navbar() {
                     </div>
                 )}
 
-                {/* Menu Button for Mobile */}
+              
                 <button className="btn border-0" onClick={toggleMenu}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
             </div>
 
-            {/* Mega Dropdown Menu */}
+           
             {isMenuOpen && (
                 <div className="container-fluid position-absolute bg-white shadow p-4" style={{ top: "60px", width: "100%", zIndex: "1000" }}>
                     <div className="row">
-                        {/* Mobile Nav Links */}
+                      
                         {isMobile && (
                             <div className="col-12 mb-3">
                                 <ul className="list-unstyled text-center">
@@ -82,7 +82,7 @@ function Navbar() {
                             </div>
                         )}
 
-                        {/* Trading Platforms Section */}
+                        
                         <div className="col-md-6 p-3">
                             <h6 className="fw-bold">Trading Platforms</h6>
                             <ul className="list-unstyled">
@@ -105,7 +105,7 @@ function Navbar() {
                             </ul>
                         </div>
 
-                        {/* Education Section */}
+                      
                         <div className="col-md-6 p-3">
                             <h6 className="fw-bold">Education</h6>
                             <ul className="list-unstyled">

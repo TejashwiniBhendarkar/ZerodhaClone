@@ -39,23 +39,31 @@ function SignUp() {
   };
 
   return (
-    <div className="container p-5 text-center">
-      <h2 className="fs-2 mt-5">Open a free demat and trading account online</h2>
+    <div className="container p-4 text-center mt-5">
+      <h2 className="fs-2 mt-4">Open a free demat and trading account online</h2>
       <p className="text-muted">
         Start investing brokerage free and join a community of 1.5+ crore investors and traders
       </p>
 
-      <div className="row d-flex justify-content-center align-items-center p-5">
-        <div className="col-md-6">
-          <img src="/media/images/signup.svg" alt="signup" className="img-fluid" />
+      <div className="row justify-content-center align-items-center mt-4">
+        {/* Image Section */}
+        <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+          <img
+            src="/media/images/signup.svg"
+            alt="signup"
+            className="img-fluid"
+            style={{ maxWidth: "90%", height: "auto", minWidth: "250px" }}
+          />
         </div>
 
-        <div className="col-md-5 text-start">
-          <h2>Signup now</h2>
+        {/* Form Section */}
+        <div className="col-lg-5 col-md-6 col-sm-12 text-center text-md-start mt-4">
+          <h2 className="fw-bold">Signup now</h2>
           <p className="text-muted">Or track your existing application</p>
 
-          <form onSubmit={handleSubmit}>
-            <div className="input-group mb-3" style={{ maxWidth: "350px" }}>
+          <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center">
+            {/* Mobile Number Input */}
+            <div className="input-group mb-3 w-100 px-2" style={{ maxWidth: "400px" }}>
               <span className="input-group-text">+91</span>
               <input
                 type="text"
@@ -67,8 +75,8 @@ function SignUp() {
               />
             </div>
 
-            {/* Password Input */}
-            <div className="input-group mb-3" style={{ maxWidth: "350px" }}>
+           
+            <div className="input-group mb-3 w-100 px-2" style={{ maxWidth: "400px" }}>
               <input
                 type="password"
                 placeholder="Create a password"
@@ -79,7 +87,10 @@ function SignUp() {
               />
             </div>
 
-            <button className="btn btn-primary w-50 p-2 fs-5">Create Account</button>
+           
+            <button className="btn btn-primary w-100 p-2 fs-5 px-2" style={{ maxWidth: "400px" }}>
+              Create Account
+            </button>
           </form>
 
           <p className="mt-3">

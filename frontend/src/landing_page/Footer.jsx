@@ -7,15 +7,15 @@ function Footer() {
     <footer style={{ backgroundColor: "rgb(250, 250, 250)", width: "100%" }}>
       <div className="container border-top mt-5 py-4">
         
-        {/* Logo & Copyright */}
+     
         <div className="text-center text-md-start mb-4">
           <img src="media/images/logo.svg" style={{ width: "150px" }} alt="Logo" />
           <p className="mt-2 text-muted">&copy; 2010 - 2025, Zerodha Broking Ltd. All rights reserved.</p>
         </div>
 
-        {/* Footer Sections */}
+       
         <div className="row text-center text-md-start">
-          {/* Company Section */}
+         
           <div className="col-12 col-md-4 mb-4">
             <h6 className="fw-bold">Company</h6>
             <Link to="/about" className="d-block text-muted" style={{textDecoration:"none"}}>About</Link>
@@ -25,21 +25,21 @@ function Footer() {
             <Link to="/career" className="d-block text-muted"style={{textDecoration:"none"}}>Careers</Link>
           </div>
 
-          {/* Support Section */}
+         
           <div className="col-12 col-md-4 mb-4">
             <h6 className="fw-bold">Support</h6>
             <Link to="/support" className="d-block text-muted"style={{textDecoration:"none"}}>Support portal</Link>
             <Link to="/pricing" className="d-block text-muted"style={{textDecoration:"none"}}>List of charges</Link>
           </div>
 
-          {/* Account Section */}
+          
           <div className="col-12 col-md-4 mb-4">
             <h6 className="fw-bold">Account</h6>
             <Link to="/signup" className="d-block text-muted"style={{textDecoration:"none"}}>Open an account</Link>
           </div>
         </div>
 
-        {/* Disclaimer */}
+      
         <div className="mt-4 text-muted" style={{ fontSize: "14px" }}>
           <p>
             Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.: INZ000031633 
