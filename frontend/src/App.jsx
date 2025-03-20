@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./landing_page/home/HomePage";
-import Signup from "./landing_page/signup/Signup";
+import Signup from "./landing_page/signup/Signup.jsx";
 import AboutPage from "./landing_page/about/AboutPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
 import SupportPage from "./landing_page/support/SupportPage";
