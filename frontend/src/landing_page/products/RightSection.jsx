@@ -13,9 +13,9 @@ function RightSection({ imageURL, productName, productDesription, learnMore }) {
           <h1>{productName}</h1>
           <p>{productDesription}</p>
           <div>
-            <a href={learnMore} className="text-decoration-none">
+            {/* <a href={learnMore} className="text-decoration-none">
               Learn More <i className="fa fa-long-arrow-right ms-1"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
