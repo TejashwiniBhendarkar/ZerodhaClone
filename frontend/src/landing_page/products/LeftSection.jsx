@@ -29,12 +29,12 @@ function LeftSection({
 
          
           <div className="mt-3">
-            <a href={tryDemo} className="text-decoration-none">
+            {/* <a href="https://frontend-elequlc4t-tejashwinis-projects-5dfe6e74.vercel.app/" className="text-decoration-none">
               Try Demo <i className="fa fa-long-arrow-right ms-1"></i>
             </a>
             <a href={learnMore} className="text-decoration-none mx-4">
               Learn More <i className="fa fa-long-arrow-right ms-1"></i>
-            </a>
+            </a> */}
           </div>
 
           {/* App Store Badges */}
